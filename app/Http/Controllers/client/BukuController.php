@@ -13,7 +13,7 @@ class BukuController extends Controller
     {
         // Memuat buku dengan relasi penulis, penerbit, dan genre serta melakukan pagination
         $bukus = Buku::with(['penulis', 'penerbit', 'genre'])->paginate(12);  // Menampilkan 12 buku per halaman
-    
+       
         return view('client.buku.index', compact('bukus'));
     }
 }

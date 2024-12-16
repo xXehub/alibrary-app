@@ -367,15 +367,15 @@
                                                 class="self-center flex flex-col items-center space-y-1 text-center p-2 w-full">
                                                 <div
                                                     class="max-w-full capitalize line-clamp-1 overflow-x-hidden rounded-lg px-3 font-medium py-1 bg-primary-500/50 text-xs border-primary-500 text-white">
-                                                    {{ $buku->genre ?? 'Unknown Genre' }}
+                                                    {{ $buku->genre->nama_genre ?? 'Unknown Genre' }}
                                                 </div>
                                                 <h1
                                                     class="capitalize text-white text-base sm:text-lg font-bold drop-shadow-md line-clamp-1">
                                                     {{ $buku->title }}
                                                 </h1>
                                                 <h3 class="text-gray-100 text-xs sm:text-sm line-clamp-1">
-                                                    {{ $buku->penulis ?? 'Unknown Author' }}
-                                                    {{ $buku->penerbit ?? 'Unknown Publisher' }}
+                                                    {{ $buku->penulis->nama_author ?? 'Unknown Author' }}
+                                                    {{ $buku->penerbit->nama_penerbit ?? 'Unknown Publisher' }}
                                                 </h3>
                                             </div>
 
